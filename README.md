@@ -128,9 +128,7 @@ whats really important to start things off is the Layers.
 
 ---
 
-**Layers**
-
----
+## **Layers**
 
 Lets list the contents of the first layer.
 
