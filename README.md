@@ -17,31 +17,31 @@ and containers.
 
 ## Why a container?
 
-    The Magic Box: Think of a Linux container as a special box that you can put your toys (or programs) in. This box is like a mini-computer inside your computer.
+The Magic Box: Think of a Linux container as a special box that you can put your toys (or programs) in. This box is like a mini-computer inside your computer.
 
-    Isolation: Each box (container) is like its own little world. Inside, you can have one program, like a game, and it won't know or bother the other programs in their own boxes. It's like having separate rooms for your toys.
+Isolation: Each box (container) is like its own little world. Inside, you can have one program, like a game, and it won't know or bother the other programs in their own boxes. It's like having separate rooms for your toys.
 
-    Sharing: Even though they're in separate boxes, containers can still talk to the outside world when they need to. They can share some things, like the internet or files, but only if you let them.
+Sharing: Even though they're in separate boxes, containers can still talk to the outside world when they need to. They can share some things, like the internet or files, but only if you let them.
 
-    Easy to Move: Containers are like toy boxes that you can easily pick up and move to different places, like to your friend's house or even to a big playground (which is a real computer server). This makes it easy to run the same program on different computers without any problems.
+Easy to Move: Containers are like toy boxes that you can easily pick up and move to different places, like to your friend's house or even to a big playground (which is a real computer server). This makes it easy to run the same program on different computers without any problems.
 
-    Consistency: When you put the same toy in different containers, it's always the same toy. Similarly, when you put the same program in different containers, it behaves the same way, which helps keep things predictable and reliable.
+Consistency: When you put the same toy in different containers, it's always the same toy. Similarly, when you put the same program in different containers, it behaves the same way, which helps keep things predictable and reliable.
 
-    Resource Control: You can also decide how much space, memory, and CPU power each container gets. It's like saying, "This container can have a big play area, but that one only gets a small space."
+Resource Control: You can also decide how much space, memory, and CPU power each container gets. It's like saying, "This container can have a big play area, but that one only gets a small space."
 
-    So, Linux containers are like magical boxes that let you keep your programs separate, but still, let them play nicely together when you want. They make it easy to move your programs around and control how much of your computer's resources they use. It's like having a neat and organized way to play with all your favorite toys!
+So, Linux containers are like magical boxes that let you keep your programs separate, but still, let them play nicely together when you want. They make it easy to move your programs around and control how much of your computer's resources they use. It's like having a neat and organized way to play with all your favorite toys!
 
 ---
 
 ## What make's up a container?
 
-    The Root File System: Think of the root file system as a magic sandbox. It's like a small world where your toy programs will live. You start by making a special folder (sandbox) on your computer and put everything your toy program needs inside it. This includes all the toy parts and instructions (files and programs) that your toy needs to work.
+The Root File System: Think of the root file system as a magic sandbox. It's like a small world where your toy programs will live. You start by making a special folder (sandbox) on your computer and put everything your toy program needs inside it. This includes all the toy parts and instructions (files and programs) that your toy needs to work.
 
-    chroot Command: Now, you use a special command called chroot. It's like a magic spell that says, "Hey, toy program, you can only see and play with the stuff inside this sandbox!" You run this command to enter the sandbox, and now your toy program thinks it's in its own little world.
+chroot Command: Now, you use a special command called chroot. It's like a magic spell that says, "Hey, toy program, you can only see and play with the stuff inside this sandbox!" You run this command to enter the sandbox, and now your toy program thinks it's in its own little world.
 
-    Process Isolation: Once inside the sandbox, your toy program can't see or touch anything outside of it. It's like putting a bubble around it so it doesn't mess up your room (your main computer). It can only play with the toys (files and programs) you put inside the sandbox.
+Process Isolation: Once inside the sandbox, your toy program can't see or touch anything outside of it. It's like putting a bubble around it so it doesn't mess up your room (your main computer). It can only play with the toys (files and programs) you put inside the sandbox.
 
-    So, you've created a container by making a special sandbox (root file system), using the chroot command to enter it, and then isolating your toy program so it can't affect anything outside the sandbox. This way, you can run different programs in their own sandboxes without them causing chaos in your room (computer).
+So, you've created a container by making a special sandbox (root file system), using the chroot command to enter it, and then isolating your toy program so it can't affect anything outside the sandbox. This way, you can run different programs in their own sandboxes without them causing chaos in your room (computer).
 
 ---
 
