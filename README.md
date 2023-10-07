@@ -237,6 +237,7 @@ and BOOM babyyy! you should see:
 the same thing in Go-lang would look like:
 
 ```go
+  // .. ^ more stuff up here
 	// now we chroot into the temporary directory
 	err = syscall.Chroot(tempDir)
 	if err != nil {
@@ -257,10 +258,21 @@ func isolateProcess() error {
 In this case we also create a new Namespace for the container so that the processes are isolated
 as well.
 
+---
+
+## Wrapping up
+
 In the most simplest terms a `Container` is a directory that pretends to be a linux `/` root folder...
-and we ask the Linux Kernel "Hey, bro can you treat this folder as a `root` directory and give
-that baby a shiny new namespace/pid namespace/mount namespace to frolick and play in?" and
-Linus Torvalds is personally like, "Yea, dude. I got you fam. You are now chilling in a new root."
+
+Then, we ask the Linux Kernel:
+"Hey, bro can you treat this folder as a `root` directory and give that baby a
+shiny new namespace/pid namespace/mount namespace to frolick and play in?"
+
+and Linus Torvalds is personally like,
+"Yea, dude. I got you fam. You are now chilling in a new root."
+
 We have "Changed root's" so to speak... wait a minute Ch..ange root? Ch-root? CHROOT! CHROOT! CHROOT!
+
+---
 
 This has been a lesson on containers from a complete noob dumbass. Thanks for coming to my Ted Talk.
