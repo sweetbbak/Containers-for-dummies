@@ -1,14 +1,17 @@
 ## Containers for dummies
 
-<i>Disclaimer<\i> I am an dummy myself, this is how someone like myself understands
+_Disclaimer_
+I am an dummy myself, this is how someone like myself understands
 a concept that seems a lot more complex than it really is. Containers are awesome
 but the current ecosystem around them is NOT simple whatsoever, and finding answers
-in plain English is next to impossible. So, with my limited understanding, in programming and
-in containers... I will try my best to make a simple explanation so that anyone can get the
+in plain English is next to impossible.
+
+So, with my limited understanding, in programming and in containers...
+I will try my best to make a simple explanation so that anyone can get the
 basic idea (including myself) I have less than a year of experience with Linux, programming
 and containers.
 
-<b>Containers<\b>
+**Containers**
 Containers are deceptively simple things.
 Go ahead and run:
 
