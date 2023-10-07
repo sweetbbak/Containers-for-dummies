@@ -136,6 +136,9 @@ Lets list the contents of the first layer.
   tar --list --file "879df13c861a38a80e992a4ef150d4a6527f62993cc6e79ab0141e7e42d30f4a/layer.tar
 ```
 
+If we only look at the files at the top level we get:
+![](images/root.png)
+
 Wow! It looks exactly like when we ran `ls /` earlier! That's because it is. (for the most part)
 this is our base system layer! It contains all of the same system files that would be found on
 any normal Linux system after a fresh install.
