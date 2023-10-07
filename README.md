@@ -46,8 +46,9 @@ we should see something like this:
 
 It's essentially the common organization of a Linux filesystem. We can see some
 directories and a few symlinks to other directories for compatibility reasons.
-(example: /sbin is symlinked to /usr/bin so if a program looks for a binary or tries
-to put a binary in /sbin, it will be directed to /usr/bin.) This is for compatiblity
+
+(example: `/sbin` is symlinked to `/usr/bin` so if a program looks for a binary or tries
+to put a binary in `/sbin`, it will be directed to `/usr/bin`.) This is for compatiblity
 and legacy reasons.
 
 in `/usr/bin` we see binaries that are often found on most Linux distributions. Like
@@ -58,7 +59,7 @@ files are kept. Including libs in `/usr/lib` and boot files in `/boot`
 
 this is what makes up the core of a Linux system (besides the Kernel)
 
-## Creating our own.
+## Creating our own Container.
 
 - Pull an image from Docker hub (or a similar registry)
   run our included image pull script that we got from github.com/moby/moby
@@ -111,7 +112,7 @@ Hey! We recognize those `RepoTags` thats what we used to pull this image.
 
 whats really important to start things off is the Layers.
 
-<b>Layers<\b>
+**Layers**
 
 ```sh
   tar --list --file "879df13c861a38a80e992a4ef150d4a6527f62993cc6e79ab0141e7e42d30f4a/layer.tar
@@ -180,6 +181,7 @@ Instead we create a `layer.tar` that contains our `/nix` folder
 Its hard af to get a straight answer on this WITHOUT using Docker/Podman directly.
 It's useless. We want to understand wtf is happening, not rely on every little abstraction
 to carry us. So here's how:
+
 (Please note that you can do this manually, or programatically - like pulling this info
 directly from Docker and parsing the layers and doing the following instructions)
 
@@ -203,6 +205,8 @@ Now our "base image" is in our temp directory
   the layers are in descending order, meaning we go through the `layers` field of our `manifest.json`
   one at a time and extract each one into the `my_pod` temp directory that will serve as our new root
   folder for our image
+
+this tar command extracts `X` file into the specified `directory`
 
 ```sh
   tar --extract --file 51e4cf10935ead003f616f2363ae3260e28c7bc9536763dc0631638526168e2b/layer.tar --directory=my_pod/
